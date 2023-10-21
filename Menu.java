@@ -20,41 +20,23 @@ public class Menu {
     Carrinho carrinho = new Carrinho();
     Scanner sc = new Scanner(System.in);
 
-      while (true){
+    while (true){
 
-        System.out.println();
-        System.out.println("1- Adicionar Produto Ao Carrinho");
-        System.out.println("2- Listar Produtos");
-        System.out.println("3- Sair ");
-        System.out.println();
-        System.out.println(" Digite a opção: ");
+      System.out.println("Digite o Id do produto: ");
+      int idProduto = sc.nextInt();
 
-        int opcao = sc.nextInt();
-        sc.nextLine();
-
-        switch(opcao)
-        {
-          case 1:
-            System.out.println("Digite o Id do produto: ");
-            int idProduto = sc.nextInt();
-
-            System.out.println("Digite a quantidade: ");    
-            int quantidade = sc.nextInt();
+      System.out.println("Digite a quantidade: ");    
+      int quantidade = sc.nextInt();
             
-            carrinho.adicionarAoCarrinho(idProduto, quantidade, produto);
-            break;
-
-          case 2:
-            carrinho.listarCarrinho(produto);
-          break;
-
-          case 3:
-            System.exit(0);
-          break;
-
-          default:
-            System.out.println("Opção inválida. Tente novamente!");
-          }      
+      carrinho.adicionarAoCarrinho(idProduto, quantidade, produto);
+            
+      System.out.print("Deseja adicionar outro produto ao carrinho? (1 para Sim, 0 para Não): ");
+      int resposta = sc.nextInt();
+        
+      if (resposta == 0) {
+        carrinho.listarCarrinho(produto);
+        System.exit(0);
+      }
     }
   }
 }
