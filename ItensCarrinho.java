@@ -2,30 +2,30 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 class ItensCarrinho {
-  private int id;
-  private float valor;
+  private int idProduto;
   private int quantidade;
+  private double valorTotal;
 
-  public ItensCarrinho (int id, float valor, int quantidade) {
-    this.id = id;
-    this.valor = valor;
+  public ItensCarrinho (int idProduto, int quantidade, double valorTotal) {
+    this.idProduto = idProduto;
     this.quantidade = quantidade;
+    this.valorTotal = valorTotal;
   }
 
-  public int getId() {
-    return id;
+  public int getIdProduto() {
+    return idProduto;
   }
 
-  public void setId(int id) {
-    this.id = id;
+  public void setIdProduto(int idProduto) {
+    this.idProduto = idProduto;
   }
 
-  public float getValor() {
-    return valor;
+  public double getValorTotal() {
+    return valorTotal;
   }
 
-  public void setValor(float valor) {
-    this.valor = valor;
+  public void setValorTotal(double valorTotal) {
+    this.valorTotal = valorTotal;
   }
 
 public int getQuantidade() {
